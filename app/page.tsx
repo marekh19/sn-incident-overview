@@ -1,9 +1,16 @@
 import type { NextPage } from 'next'
 
-const h1styles = ['text-3xl', 'font-bold', 'underline'].join(' ')
+import { h1Styles } from './style'
 
 const HomePage: NextPage = () => {
-  return <h1 className={h1styles}>Hello world!</h1>
+  return (
+    <>
+      <h1 className={h1Styles}>Hello world!</h1>
+      <p>asd</p>
+      <p>asd</p>
+      <p>asd</p>
+    </>
+  )
 }
 
 export default HomePage
