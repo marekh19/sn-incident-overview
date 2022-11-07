@@ -6,8 +6,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html>
-      <head></head>
+    <html className="h-100 w-full bg-mantle text-text">
+      <head>
+        <title>React & SN Incidents</title>
+      </head>
       <body>{children}</body>
     </html>
   )
