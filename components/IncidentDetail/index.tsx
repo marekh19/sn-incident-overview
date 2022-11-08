@@ -10,6 +10,7 @@ interface Props {
   category: string
   subcategory: string
   priority: string
+  opened: string
 }
 
 export const IncidentDetail: FC<Props> = ({
@@ -21,6 +22,7 @@ export const IncidentDetail: FC<Props> = ({
   shortDescription,
   state,
   subcategory,
+  opened,
 }) => {
   return (
     <article>
@@ -48,6 +50,11 @@ export const IncidentDetail: FC<Props> = ({
           name="State"
           value={state}
         />
+        <IncidentField
+          name="Opened"
+          value={opened}
+        />
+
         <IncidentField
           name="Short Description"
           value={shortDescription}
