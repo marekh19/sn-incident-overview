@@ -4,17 +4,8 @@ import { IncidentCard } from './parts/Card';
 
 export interface Incident {
   number: string;
-  short_description: string;
-  caller_id: {
-    display_value: string;
-    link: string;
-  };
-  description: string;
   state: string;
-  category: string;
-  subcategory: string | null;
   priority: string;
-  opened_at: string;
 }
 
 interface Props {

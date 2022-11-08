@@ -1,71 +1,39 @@
-import type { FC } from 'react'
-import { IncidentField } from './parts/Field'
+import type { FC } from 'react';
+import { IncidentField } from './parts/Field';
+
+interface Incident {
+  number: string;
+  short_description: string;
+  opened_at: string;
+  caller_id: { display_value: string; link: string };
+  description: string;
+  state: string;
+  category: string;
+  subcategory: string | null;
+  priority: string;
+}
 
 interface Props {
-  number: string
-  shortDescription: string
-  caller: string
-  description: string
-  state: string
-  category: string
-  subcategory: string
-  priority: string
-  opened: string
+  data: Incident;
 }
 
-export const IncidentDetail: FC<Props> = ({
-  number,
-  caller,
-  category,
-  description,
-  priority,
-  shortDescription,
-  state,
-  subcategory,
-  opened,
-}) => {
+export const IncidentDetail: FC<Props> = ({ data }) => {
   return (
     <article>
-      <h2 className="m-5 text-3xl">
-        Incident <span className="font-bold text-blue">{number}</span>
+      <h2 className='m-5 text-3xl'>
+        Incident <span className='font-bold text-blue'>{data.number}</span>
       </h2>
-      <ul className="m-5 grid auto-rows-auto grid-cols-2 gap-x-3">
-        <IncidentField
-          name="Caller"
-          value={caller}
-        />
-        <IncidentField
-          name="Priority"
-          value={priority}
-        />
-        <IncidentField
-          name="Category"
-          value={category}
-        />
-        <IncidentField
-          name="Subcategory"
-          value={subcategory}
-        />
-        <IncidentField
-          name="State"
-          value={state}
-        />
-        <IncidentField
-          name="Opened"
-          value={opened}
-        />
+      <ul className='m-5 grid auto-rows-auto grid-cols-2 gap-x-3'>
+        <IncidentField name='Caller' value={data.caller_id.display_value} />
+        <IncidentField name='Priority' value={data.priority} />
+        <IncidentField name='Category' value={data.category} />
+        <IncidentField name='Subcategory' value={data.subcategory} />
+        <IncidentField name='State' value={data.state} />
+        <IncidentField name='Opened' value={data.opened_at} />
 
-        <IncidentField
-          name="Short Description"
-          value={shortDescription}
-          wide
-        />
-        <IncidentField
-          name="Description"
-          value={description}
-          wide
-        />
+        <IncidentField name='Short Description' value={data.short_description} wide />
+        <IncidentField name='Description' value={data.description} wide />
       </ul>
     </article>
-  )
-}
+  );
+};

@@ -3,27 +3,27 @@ import './globals.css';
 import { IncidentList } from '../components/IncidentList';
 import { Incident } from '../components/IncidentList';
 
-const url = process.env.SN_HOST!;
-const credentials = process.env.SN_CREDENTIALS;
-
-const getData = async () => {
-  const res = await fetch(url, {
-    method: 'GET',
-    cache: 'no-store',
-    headers: {
-      Authorization: `Basic ${credentials}`,
-    },
-  });
-  return res.json();
-};
-
-const sortData = (incidentA: Incident, incidentB: Incident) => {
-  if (incidentA.number < incidentB.number) return -1;
-  if (incidentA.number > incidentB.number) return 1;
-  return 0;
-};
-
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const url =
+    'http://dev90173.service-now.com/api/now/table/incident?sysparm_display_value=true&sysparm_fields=number%2Cstate%2Cpriority';
+  const credentials = process.env.SN_CREDENTIALS;
+
+  const getData = async () => {
+    const res = await fetch(url, {
+      method: 'GET',
+      headers: {
+        Authorization: `Basic ${credentials}`,
+      },
+    });
+    return res.json();
+  };
+
+  const sortData = (incidentA: Incident, incidentB: Incident) => {
+    if (incidentA.number < incidentB.number) return -1;
+    if (incidentA.number > incidentB.number) return 1;
+    return 0;
+  };
+
   const data = await getData();
   const sortedData = data.result.sort(sortData);
 
