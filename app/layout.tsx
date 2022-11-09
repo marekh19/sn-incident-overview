@@ -3,16 +3,17 @@ import './globals.css';
 import { IncidentList } from '../components/IncidentList';
 import { Incident } from '../components/IncidentList';
 
+import { getBasicAuthString } from '../utils/auth';
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const url =
-    'http://dev90173.service-now.com/api/now/table/incident?sysparm_display_value=true&sysparm_fields=number%2Cstate%2Cpriority';
-  const credentials = process.env.SN_CREDENTIALS;
+  const url = `${process.env.SN_INSTANCE_URL}/api/now/table/incident?sysparm_display_value=true&sysparm_fields=number%2Cstate%2Cpriority`;
+  const auth = getBasicAuthString();
 
   const getData = async () => {
     const res = await fetch(url, {
       method: 'GET',
       headers: {
-        Authorization: `Basic ${credentials}`,
+        Authorization: auth,
       },
     });
     return res.json();
