@@ -2,7 +2,7 @@ import { IncidentDetail } from '../../components/IncidentDetail';
 import { getBasicAuthString } from '../../utils/auth';
 
 const IncidentDetailPage = async ({ params }: any) => {
-  const url = `${process.env.SN_INSTANCE_URL}/api/now/table/incident?sysparm_query=number%3D${params.incidentNumber}&sysparm_display_value=true&sysparm_fields=number%2Ccaller_id%2Ccategory%2Csubcategory%2Cdescription%2Cshort_description%2Cstate%2Copened_at`;
+  const url = `${process.env.SN_INSTANCE_URL}/api/now/table/incident?sysparm_query=number%3D${params.incidentNumber}&sysparm_display_value=true&sysparm_fields=number%2Ccaller_id%2Ccategory%2Csubcategory%2Cdescription%2Cshort_description%2Cstate%2Copened_at%2Cpriority`;
   const auth = getBasicAuthString();
 
   const getData = async () => {

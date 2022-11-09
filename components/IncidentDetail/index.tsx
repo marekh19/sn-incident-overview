@@ -26,13 +26,13 @@ export const IncidentDetail: FC<Props> = ({ data }) => {
       <ul className='m-5 grid auto-rows-auto grid-cols-2 gap-x-3'>
         <IncidentField name='Caller' value={data.caller_id.display_value} />
         <IncidentField name='Priority' value={data.priority} />
-        <IncidentField name='Category' value={data.category} />
-        <IncidentField name='Subcategory' value={data.subcategory} />
+        {data.category && <IncidentField name='Category' value={data.category} />}
+        {data.subcategory && <IncidentField name='Subcategory' value={data.subcategory} />}
         <IncidentField name='State' value={data.state} />
         <IncidentField name='Opened' value={data.opened_at} />
 
         <IncidentField name='Short Description' value={data.short_description} wide />
-        <IncidentField name='Description' value={data.description} wide />
+        {data.description && <IncidentField name='Description' value={data.description} wide />}
       </ul>
     </article>
   );
