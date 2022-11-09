@@ -1,10 +1,14 @@
 # ServiceNow Incident Overview
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-This project is built with Next.js 13 using the yet experimental `/app` directory and [React Server Components](https://nextjs.org/docs/advanced-features/react-18/server-components)
+This project uses [Next.js 13](https://nextjs.org/) with the yet beta and experimental `/app` directory and [React Server Components](https://nextjs.org/docs/advanced-features/react-18/server-components)
 
 Data is pulled from your ServiceNow instance using [Table API](https://developer.servicenow.com/dev.do#!/reference/api/tokyo/rest/c_TableAPI). We're using `[incident]` table here, but feel free to change it to whatever table you want to experiment with.
+
+## Built with
+
+- [Next.js](https://nextjs.org/)
+- [React.js](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## Getting Started
 
