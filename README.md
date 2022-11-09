@@ -4,6 +4,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 This project is built with Next.js 13 using the yet experimental `/app` directory and [React Server Components](https://nextjs.org/docs/advanced-features/react-18/server-components)
 
+Data is pulled from your ServiceNow instance using [Table API](https://developer.servicenow.com/dev.do#!/reference/api/tokyo/rest/c_TableAPI). We're using `[incident]` table here, but feel free to change it to whatever table you want to experiment with.
+
 ## Getting Started
 
 ### Environment variables
