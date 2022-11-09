@@ -34,7 +34,8 @@ npm run dev
 yarn dev
 ```
 
-> **Note**
+> **Warning**
+
 > While running in dev server, error may occur when rendering the Incident detail. I wasn't yet able to solve it. You can use a workaround and build the application. This error does not occur in production build
 
 ```bash
