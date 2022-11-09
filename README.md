@@ -20,31 +20,37 @@ You can take a look at `.env.example` file. This app uses 3 environment variable
 
 ### How to run the app
 
-First, create `.env.local` file where you will store your environment variables
+First, create `.env.local` file where you will store your environment variables:
 
 ```bash
-cp .env.example .env.local
+$ cp .env.example .env.local
 ```
 
 And change the example values to your values
 
-Then run the development server:
+Then install all dependencies:
 
 ```bash
-npm run dev
+$ npm install
 # or
-yarn dev
+$ yarn
+```
+
+Last run the development server:
+
+```bash
+$ npm run dev
+# or
+$ yarn dev
 ```
 
 > **Warning**
 > While running in dev server, error may occur when rendering the Incident detail. I wasn't yet able to solve it. You can use a workaround and build the application. This error does not occur in production build
 
 ```bash
-npm run build
-npm run start
+$ npm run build && npm run start
 # or
-yarn build
-yarn start
+$ yarn build && yarn start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
