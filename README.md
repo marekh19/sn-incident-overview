@@ -10,6 +10,8 @@ Data is pulled from your ServiceNow instance using [Table API](https://developer
 - [React.js](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
+![sn-incident-overview demo showcase](/public/sn-incident-overview.jpg?raw=true 'Demo')
+
 ## Getting Started
 
 ### Environment variables
