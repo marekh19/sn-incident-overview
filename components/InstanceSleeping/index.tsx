@@ -1,6 +1,6 @@
-import type { FC } from 'react'
+import type { FC } from "react";
 
-import { SleepingSvg } from './parts/SleepingSvg'
+import { SleepingSvg } from "./parts/SleepingSvg";
 
 export const InstanceSleeping: FC = () => {
   return (
@@ -13,5 +13,5 @@ export const InstanceSleeping: FC = () => {
         Login to wake it up and see its content.
       </h2>
     </div>
-  )
-}
+  );
+};

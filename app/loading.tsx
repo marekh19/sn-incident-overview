@@ -1,4 +1,4 @@
-import type { FC } from 'react'
+import type { FC } from "react";
 
 const Loader: FC = () => {
   return (
@@ -10,11 +10,7 @@ const Loader: FC = () => {
         fill="currentColor"
       >
         <g transform="matrix(1 0 0 -1 0 80)">
-          <rect
-            width="10"
-            height="20"
-            rx="3"
-          >
+          <rect width="10" height="20" rx="3">
             <animate
               attributeName="height"
               begin="0s"
@@ -24,12 +20,7 @@ const Loader: FC = () => {
               values="20;45;57;80;64;32;66;45;64;23;66;13;64;56;34;34;2;23;76;79;20"
             />
           </rect>
-          <rect
-            width="10"
-            height="80"
-            x="15"
-            rx="3"
-          >
+          <rect width="10" height="80" x="15" rx="3">
             <animate
               attributeName="height"
               begin="0s"
@@ -39,12 +30,7 @@ const Loader: FC = () => {
               values="80;55;33;5;75;23;73;33;12;14;60;80"
             />
           </rect>
-          <rect
-            width="10"
-            height="50"
-            x="30"
-            rx="3"
-          >
+          <rect width="10" height="50" x="30" rx="3">
             <animate
               attributeName="height"
               begin="0s"
@@ -54,12 +40,7 @@ const Loader: FC = () => {
               values="50;34;78;23;56;23;34;76;80;54;21;50"
             />
           </rect>
-          <rect
-            width="10"
-            height="30"
-            x="45"
-            rx="3"
-          >
+          <rect width="10" height="30" x="45" rx="3">
             <animate
               attributeName="height"
               begin="0s"
@@ -72,7 +53,7 @@ const Loader: FC = () => {
         </g>
       </svg>
     </div>
-  )
-}
+  );
+};
 
-export default Loader
+export default Loader;

@@ -1,6 +1,6 @@
-import type { FC } from 'react';
+import type { FC } from "react";
 
-import { IncidentCard } from './parts/Card';
+import { IncidentCard } from "./parts/Card";
 
 export interface Incident {
   number: string;
