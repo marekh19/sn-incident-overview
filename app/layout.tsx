@@ -1,20 +1,20 @@
-import "./globals.css";
+import './globals.css'
 
-import { IncidentList } from "../components/IncidentList";
+import { IncidentList } from '../components/IncidentList'
 
-import { getListOfIncidents, getSortedData } from "../utils/api";
-import { InstanceSleeping } from "../components/InstanceSleeping";
+import { getListOfIncidents, getSortedData } from '../utils/api'
+import { InstanceSleeping } from '../components/InstanceSleeping'
 
 export default async function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
-  const data = await getListOfIncidents();
-  const sortedData = data ? data.result.sort(getSortedData) : null;
+  const data = await getListOfIncidents()
+  const sortedData = data ? data.result.sort(getSortedData) : null
 
   return (
-    <html className="h-full w-full bg-mantle text-text">
+    <html className="h-full w-full overflow-hidden bg-mantle text-text">
       <head>
         <title>React & SN Incidents</title>
       </head>
@@ -31,5 +31,5 @@ export default async function RootLayout({
         </body>
       )}
     </html>
-  );
+  )
 }
