@@ -32,7 +32,7 @@ First, create `.env.local` file where you will store your environment variables:
 $ cp .env.example .env.local
 ```
 
-And change the example values to your values
+And change the **example values** to **your values**
 
 Then install all dependencies:
 
@@ -48,15 +48,6 @@ Last run the development server:
 $ npm run dev
 # or
 $ yarn dev
-```
-
-> **Warning**
-> While running in dev server, error may occur when rendering the Incident detail. I wasn't yet able to solve it. You can use a workaround and build the application. This error does not occur in production build
-
-```bash
-$ npm run build && npm run start
-# or
-$ yarn build && yarn start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
