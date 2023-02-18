@@ -1,6 +1,6 @@
-export const getBasicAuthString = () => {
-  const userName = process.env.SN_INSTANCE_USERNAME;
-  const pwd = process.env.SN_INSTANCE_PWD;
-  const encoded = Buffer.from(`${userName}:${pwd}`);
-  return `Basic ${encoded.toString('base64')}`;
-};
+export const createBasicAuthString = (): string => {
+  const userName = process.env.SN_INSTANCE_USERNAME
+  const password = process.env.SN_INSTANCE_PWD
+  const encodedCredentials = btoa(`${userName}:${password}`)
+  return `Basic ${encodedCredentials}`
+}
