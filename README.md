@@ -29,7 +29,7 @@ You can take a look at `.env.example` file. This app uses 3 environment variable
 First, create `.env.local` file where you will store your environment variables:
 
 ```bash
-$ cp .env.example .env.local
+$ cp .env.example .env
 ```
 
 And change the **example values** to **your values**
@@ -39,7 +39,7 @@ Then install all dependencies:
 ```bash
 $ npm install
 # or
-$ yarn
+$ pnpm install
 ```
 
 Last run the development server:
@@ -47,7 +47,7 @@ Last run the development server:
 ```bash
 $ npm run dev
 # or
-$ yarn dev
+$ pnpm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

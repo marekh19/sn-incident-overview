@@ -1,7 +1,9 @@
 import type { FC } from "react";
 import { IncidentField } from "./parts/Field";
 
-interface Incident {
+type Maybe<T> = T | null;
+
+type Incident = {
   number: string;
   short_description: string;
   opened_at: string;
@@ -11,11 +13,11 @@ interface Incident {
   category: string;
   subcategory: string | null;
   priority: string;
-}
+};
 
-interface Props {
-  data: Incident;
-}
+type Props = {
+  data: Maybe<Incident>;
+};
 
 export const IncidentDetail: FC<Props> = ({ data }) => {
   return (
